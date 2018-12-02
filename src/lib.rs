@@ -27,7 +27,10 @@ where
             thread::sleep(time);
         });
 
-        Self { defered, f: Box::from(f) }
+        Self {
+            defered,
+            f: Box::from(f),
+        }
     }
 
     pub fn value(&self) -> T {
